@@ -4,6 +4,7 @@ class CreatePictures < ActiveRecord::Migration[5.0]
       t.string :artist
       t.string :title
       t.string :url
+
       t.timestamps
     end
   end
