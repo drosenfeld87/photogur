@@ -29,3 +29,15 @@ Picture.create(
   title: "space cat",
   url: "https://pbs.twimg.com/media/BcvmxibIYAAH8a3.jpg",
 )
+
+Picture.create(
+  artist: "Deb",
+  title: "Lil Bub",
+  url: "https://pbs.twimg.com/profile_images/796521014041706497/sP2bB10n_400x400.jpg"
+)
+
+Picture.create(
+  artist: "Deb",
+  title: "Princess Monster Truck",
+  url: "https://static.boredpanda.com/blog/wp-content/uploads/2015/11/rescue-cat-princess-monster-truck-26.jpg"
+)
