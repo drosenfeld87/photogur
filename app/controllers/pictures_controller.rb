@@ -2,6 +2,7 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
+    @most_recent_pictures = Picture.created_before(Date.today - 1.month)
   end
 
   def show
@@ -45,6 +46,7 @@ class PicturesController < ApplicationController
       render :edit
     end
   end
+
 
   def destroy
   @picture = Picture.find(params[:id])
