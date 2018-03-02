@@ -11,11 +11,12 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
-  end
 
   def ensure_logged_in
+    # binding.pry
     unless current_user
       flash[:alert] = "Please log in"
       redirect_to new_session_url
+    end
   end
 end
