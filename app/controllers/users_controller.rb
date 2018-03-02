@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 
   def new
     @user = User.new
@@ -12,9 +12,11 @@ class UserController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
-      redirect_to root_url
-    else
-      render :new
+     session[:user_id] = @user.id
+     redirect_to root_path
+   else
+     flash.now[:alert] = @user.errors.full_messages
+     render :new
     end
   end
 
